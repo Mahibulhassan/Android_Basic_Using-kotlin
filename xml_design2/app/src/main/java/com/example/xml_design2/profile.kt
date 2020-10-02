@@ -13,7 +13,7 @@ class profile : AppCompatActivity() {
 
         val actionbar = supportActionBar
         actionbar!!.setDisplayHomeAsUpEnabled(true)
-        actionbar!!.setDisplayHomeAsUpEnabled(true)
+
 
 
         val name = intent.getStringExtra("name")

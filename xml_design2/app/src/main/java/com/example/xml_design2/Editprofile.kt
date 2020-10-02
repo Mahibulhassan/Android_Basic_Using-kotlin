@@ -15,8 +15,8 @@ class Editprofile : AppCompatActivity() {
         this.setTitle("Edit Profile")
 
         val actionbar = supportActionBar
-        actionbar!!.setDisplayHomeAsUpEnabled(true)
-        actionbar!!.setDisplayHomeAsUpEnabled(true)
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+        actionbar.setDisplayHomeAsUpEnabled(true)
 
         btn_save.setOnClickListener{
            savedata()

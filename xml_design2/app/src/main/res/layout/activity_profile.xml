@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimaryDark"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
@@ -43,8 +44,7 @@
                 android:textSize="26sp"
                 app:layout_constraintStart_toEndOf="@+id/tv_name"
                 app:layout_constraintTop_toTopOf="@+id/tv_name"
-                tools:text="value"
-                tools:ignore="DuplicateIds" />
+                tools:text="value" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_age"
