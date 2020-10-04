@@ -66,6 +66,7 @@ class Profile_activity() : AppCompatActivity(),View.OnClickListener{
 
             editor.putString("Email","email")
             editor.putString("Password","pass")
+            editor.putBoolean("Cheack",false)
             editor.apply()
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)

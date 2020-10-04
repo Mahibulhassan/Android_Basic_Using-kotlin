@@ -13,6 +13,13 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         this.setTitle("Login")
+        val sharepreferece = getSharedPreferences("userinfo",0)
+        val cheack = sharepreferece.getBoolean("Cheack",false)
+        if(cheack==true)
+        {
+            val intent = Intent(this,Profile_activity::class.java)
+            startActivity(intent)
+        }
 
         btn_login.setOnClickListener(this)
         tv_register.setOnClickListener(this)

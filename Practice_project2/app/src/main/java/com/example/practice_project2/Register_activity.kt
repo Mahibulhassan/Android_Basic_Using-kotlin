@@ -39,6 +39,7 @@ class Register_activity : AppCompatActivity(),View.OnClickListener {
           editor.putString("Userid",userid)
           editor.putString("Password",password)
           editor.putString("Weburl",weburl)
+          editor.putBoolean("Cheack",true)
 
           editor.apply()
 
