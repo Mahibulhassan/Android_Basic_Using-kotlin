@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Task3project</string>
+    <string name="name_hint">"Name    (String)"</string>
+    <string name="age_hint">"age    (Int)"</string>
+    <string name="weight_hint">"Weight    (Float)"</string>
+    <string name="Female_hint">"Female"</string>
+    <string name="Male_hint">"Male"</string>
+    <string name="gender">"Gender"</string>
+    <string name="notification_enabled">Notification Enabled</string>
+    <string name="image_url">Image URL</string>
+    <string name="save">Save</string>
+    <string name="name">Name :</string>
+    <string name="age">Age :</string>
+    <string name="weight">Weight :</string>
+    <string name="genderProfile">Gender :</string>
+    <string name="edit">Edit</string>
+</resources>

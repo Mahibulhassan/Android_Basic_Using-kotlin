@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtext_nameid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/name_hint"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtext_ageid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/age_hint"
+        app:layout_constraintEnd_toStartOf="@+id/edtext_weightid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtext_nameid"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtext_weightid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/weight_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtext_ageid"
+        app:layout_constraintTop_toTopOf="@+id/edtext_ageid" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_genderid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/gender"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtext_weightid" />
+
+    <RadioGroup
+        android:id="@+id/radiogroupid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_genderid">
+
+        <RadioButton
+            android:id="@+id/radiobuttonmale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Male_hint"
+            app:layout_constraintEnd_toStartOf="@+id/radiogroupid" />
+
+        <RadioButton
+            android:id="@+id/radionuttonfemale"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/Female_hint" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/notificationselectid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/notification_enabled"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroupid" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtext_urlid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/image_url"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notificationselectid" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/savebuttonid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtext_urlid" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

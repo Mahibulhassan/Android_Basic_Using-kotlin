@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_profile_activity.*
-
 class MainActivity : AppCompatActivity(),View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

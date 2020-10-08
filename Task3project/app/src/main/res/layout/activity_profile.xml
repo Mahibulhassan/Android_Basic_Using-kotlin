@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".3" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_glideimageid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/name"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineid" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        tools:text="Mahibul" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/age"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_age_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/tv_age"
+        app:layout_constraintTop_toTopOf="@id/tv_age"
+        tools:text="Mahibul" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/guideline2id"
+        app:layout_constraintTop_toTopOf="@+id/tv_age" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_Weight_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/tv_weight"
+        app:layout_constraintTop_toTopOf="@id/tv_weight"
+        tools:text="Mahibul" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/genderProfile"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_gender_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/tv_gender"
+        app:layout_constraintTop_toTopOf="@id/tv_gender"
+        tools:text="Mahibul" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/notificationprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_gender"
+        tools:text="Notifiaction enable" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profileeditid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notificationprofile" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
