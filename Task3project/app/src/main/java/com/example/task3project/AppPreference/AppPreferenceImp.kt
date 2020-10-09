@@ -4,7 +4,7 @@ import android.content.Context
 
 class AppPreferenceImp(context: Context) :AppPreferance {
 
-    private val sharepreferace = context.getSharedPreferences("My Share Preference",Context.MODE_PRIVATE)
+    private val sharepreferace = context.getSharedPreferences("My_Preference",Context.MODE_PRIVATE)
     private val preference = sharepreferace.edit()
 
     override fun setname(key: String, value: String) {
