@@ -41,13 +41,9 @@ class Profile_activity() : AppCompatActivity(),View.OnClickListener{
 
     private fun loadimage() {
         val media = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
-        if (media !== null) {
-            Glide.with(this)
-                .load(media)
-                .into(iv_profile)
-        } else {
-            iv_profile.setImageResource(R.drawable.ic_launcher_background)
-        }
+        Glide.with(this)
+            .load(media)
+            .into(iv_profile)
 
     }
 //   Listner
