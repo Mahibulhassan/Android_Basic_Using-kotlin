@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Recyler_view</string>
+    <string name="price_level">%d Tk</string>
+</resources>
