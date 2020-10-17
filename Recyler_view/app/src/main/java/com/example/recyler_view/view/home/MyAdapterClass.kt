@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.recyler_view.Data.Food
 import com.example.recyler_view.R
 
-class MyAdapterClass(private val foodlist: MutableList<Food>) : RecyclerView.Adapter<FoodHolder>() {
+class MyAdapterClass(private val foodlist: MutableList<Food>,private val clickListener: FoodItemClickListener) : RecyclerView.Adapter<FoodHolder>() {
     private lateinit var context: Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodHolder {
@@ -21,7 +21,6 @@ class MyAdapterClass(private val foodlist: MutableList<Food>) : RecyclerView.Ada
     override fun onBindViewHolder(holder: FoodHolder, position: Int) {
         val food = foodlist[position]
 
-        /// Glide can not be inetilided
         Glide.with(context).load(food.imageUrl).into(holder.ivfood)
 
         holder.tvFoodName.text = food.name
@@ -30,12 +29,15 @@ class MyAdapterClass(private val foodlist: MutableList<Food>) : RecyclerView.Ada
         val favoriteImageDrawableId =
             if (food.isFavorite) R.drawable.ic_baseline_favorite_24 else R.drawable.ic_baseline_favorite_border_24
 
-        holder.ivFavorite.setImageDrawable(
-            ContextCompat.getDrawable(
-                context,
-                favoriteImageDrawableId
-            )
-        )
+        holder.ivFavorite.setImageDrawable(ContextCompat.getDrawable(context, favoriteImageDrawableId))
+
+        holder.ivfood.setOnClickListener {
+            clickListener.onItemClicked(position)
+        }
+        holder.ivFavorite.setOnClickListener {
+            clickListener.onFavoriteIconClicked(position)
+        }
+
     }
 
     override fun getItemCount(): Int {

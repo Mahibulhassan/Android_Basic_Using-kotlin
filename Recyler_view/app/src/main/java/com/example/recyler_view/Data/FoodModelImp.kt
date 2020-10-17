@@ -5,7 +5,7 @@ class FoodModelImp : FoodModel {
 
         val foodList = mutableListOf<Food>()
 
-        for (i in 1..10)
+        for (i in 1..20)
         {
             val food = Food(i*101,"Pizza Italian",250,i%2==0,"https://static.toiimg.com/photo/53110049.cms")
             foodList.add(food)

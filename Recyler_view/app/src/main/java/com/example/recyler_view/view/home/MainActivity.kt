@@ -2,7 +2,6 @@ package com.example.recyler_view.view.home
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.recyler_view.Data.FoodModel
 import com.example.recyler_view.Data.FoodModelImp
 import com.example.recyler_view.R
@@ -24,11 +23,18 @@ class MainActivity : BaseActivity() {
         foodModel = FoodModelImp()
         val foodlist = foodModel.getFoodList()
 
-        val adapter = MyAdapterClass(foodlist)
+        val adapter = MyAdapterClass(foodlist,object : FoodItemClickListener{
+            override fun onItemClicked(position: Int) {
+                showtoast(foodlist[position].name)
+            }
+
+            override fun onFavoriteIconClicked(position: Int) {
+                showtoast(position.toString())
+            }
+        })
 
         recycleviewid.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
 
-        ///i did not setup adapter on recyclervie
         recycleviewid.adapter = adapter
 
     }
