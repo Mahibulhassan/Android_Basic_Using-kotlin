@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Retrofic_get_data</string>
+    <string name="price_format">%d TK</string>
+    <string name="price_label">Price</string>
+</resources>
