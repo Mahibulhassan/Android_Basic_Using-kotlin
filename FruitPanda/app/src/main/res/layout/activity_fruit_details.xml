@@ -83,15 +83,15 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_fruitid"
         tools:text="description here" />
 
- <!--   <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_ratingid"
+    <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
-        android:textSize="16sp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="paretn"
+        android:textSize="16sp"
+        android:id="@+id/tv_raingbarid"
         app:layout_constraintTop_toBottomOf="@+id/tv_descriptionid"
-        tools:text="Rating : " />-->
-
+        tools:text="Mahibul"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

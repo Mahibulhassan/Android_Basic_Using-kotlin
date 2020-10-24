@@ -1,5 +1,6 @@
 package com.example.fruitpanda.view
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,7 @@ import com.example.fruitpanda.sharePreference.ShareprefeImp
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
 
+@Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
 class MainActivity : BaseActivity() {
 
     private lateinit var sharepreference : SharePreference
@@ -52,20 +54,18 @@ class MainActivity : BaseActivity() {
     private fun setadapter(foodList: MutableList<Fruit_model>){
         val adapter = FruitAdapter(this,foodList,object : ItemClickListner{
             override fun onItemclick(position: Int) {
-               /* sharepreference = ShareprefeImp(this@MainActivity)
-
+                sharepreference =ShareprefeImp(this@MainActivity)
                 sharepreference.setname(SharePreference.Name,foodList[position].name)
                 sharepreference.setprice(SharePreference.Price,foodList[position].price)
                 sharepreference.setdescrip(SharePreference.Description,foodList[position].description)
                 sharepreference.setfavorite(SharePreference.isfavourite,foodList[position].isFavorite)
                 sharepreference.seturl(SharePreference.Url,foodList[position].imageUrl)
                 sharepreference.setrating(SharePreference.rating,foodList[position].rating)
+
                 val intent = Intent(this@MainActivity,FruitDetailsActivity::class.java)
-                startActivity(intent)*/
+                startActivity(intent)
 
-                showToast(foodList[position].name)
             }
-
         })
 
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

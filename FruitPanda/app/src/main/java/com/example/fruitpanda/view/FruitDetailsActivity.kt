@@ -24,7 +24,7 @@ class FruitDetailsActivity : BaseActivity() {
     }
 
     override val isHomeUpButtonEnable: Boolean
-        get() = false
+        get() = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +33,7 @@ class FruitDetailsActivity : BaseActivity() {
 
     private fun fruitdetails()
     {
-        /*sharepreference = ShareprefeImp
+        sharepreference = ShareprefeImp(this)
 
         val imageurl = sharepreference.geturl(SharePreference.Url).toString()
         val name = sharepreference.getname(SharePreference.Name).toString()
@@ -47,8 +47,9 @@ class FruitDetailsActivity : BaseActivity() {
         val favoriteImageDrawableId = if (favoutite!!) R.drawable.ic_baseline_favorite_24 else R.drawable.ic_baseline_favorite_border_24
         iv_favorite.setImageDrawable(ContextCompat.getDrawable(this,favoriteImageDrawableId))
         tv_food_name.text=name
-        tv_price_value.text= price.toString()
+        tv_price_value.text= tv_price_value.context.getString(R.string.price_format,price)
         tv_descriptionid.text=description
-       // tv_ratingid.text= rating.toString()*/
+        iv_favorite.setImageDrawable(ContextCompat.getDrawable(applicationContext,favoriteImageDrawableId))
+        tv_raingbarid.text= rating.toString()
     }
 }
