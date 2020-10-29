@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Exam_recyclerview</string>
+    <string name="price_label">"Price : "</string>
+</resources>
