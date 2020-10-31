@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hasaner_Rafkhata">
-        <activity android:name=".home.view.PostDetailsActivity"></activity>
-        <activity android:name=".home.view.MainActivity">
+        <activity android:name=".home.view.PostDetailsActivity" />
+        <activity android:name=".home.view.MainActivity"
+           android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
