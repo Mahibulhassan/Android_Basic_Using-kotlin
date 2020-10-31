@@ -13,9 +13,18 @@ class PostPresenterImp(val view : PostView) : PostPresenter {
 
     override fun getallpostlist() {
         model.postlistdetails(object : NetworkCallBack{
+
+            override fun onsuccessonedata(post: Post) {
+                ///Nothis to show one post......
+            }
+
             override fun onSuccess(postlist: MutableList<Post>) {
                 //for editing date...
-                editdate(postlist)
+                for(i in 0 until postlist.size){
+                    postlist[i].date= editdate(postlist[i])
+                    //postlist[i].date.substring(0,10)
+                }
+                view.showlist(postlist)
             }
 
             override fun onError(throwable: Throwable) {
@@ -25,15 +34,30 @@ class PostPresenterImp(val view : PostView) : PostPresenter {
         })
     }
 
+    override fun getpost(postid : Int) {
+
+        model.post(postid,object : NetworkCallBack{
+            override fun onsuccessonedata(post: Post) {
+
+                post.date= editdate(post)
+                view.showonepost(post)
+            }
+
+            override fun onSuccess(postlist: MutableList<Post>) {
+                //Nothis in the post details......
+            }
+
+            override fun onError(throwable: Throwable) {
+                view.showerror(throwable.localizedMessage)
+            }
+        })
+
+    }
 
 
     ///Editing date show as a format
 
-    private fun editdate(postlist: MutableList<Post>) {
-
-        for(i in 0..postlist.size-1){
-            postlist[i].date= postlist[i].date.substring(0,10)
-        }
-        view.showlist(postlist)
+    private fun editdate(post: Post) : String{
+        return post.date.substring(0,10)
     }
 }

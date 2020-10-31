@@ -25,4 +25,21 @@ class PostModelImp : PostModel {
         })
 
     }
+
+    override fun post(post_id : Int,callback: NetworkCallBack) {
+        val callpost = apinterface.getpost(post_id)
+        callpost.enqueue(object : Callback<Post>{
+            override fun onResponse(call: Call<Post>, response: Response<Post>) {
+                response.body()?.let {
+                    callback.onsuccessonedata(it)
+                }
+            }
+
+            override fun onFailure(call: Call<Post>, t: Throwable) {
+                callback.onError(t)
+            }
+
+        })
+
+    }
 }
