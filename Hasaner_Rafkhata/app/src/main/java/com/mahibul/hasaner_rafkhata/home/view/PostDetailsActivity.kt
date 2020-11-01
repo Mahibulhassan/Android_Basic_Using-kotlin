@@ -1,6 +1,8 @@
 package com.mahibul.hasaner_rafkhata.home.view
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.Html
 import android.view.View
 import androidx.appcompat.widget.Toolbar
 import com.bumptech.glide.Glide
@@ -12,6 +14,7 @@ import com.mahibul.hasaner_rafkhata.home.presenter.PostPresenterImp
 import kotlinx.android.synthetic.main.activity_post_details.*
 import kotlinx.android.synthetic.main.toolbar.*
 
+@Suppress("DEPRECATION")
 class PostDetailsActivity : BaseActivity(),PostView {
     override fun setLayoutId(): Int {
         return R.layout.activity_post_details
@@ -41,16 +44,17 @@ class PostDetailsActivity : BaseActivity(),PostView {
         //Nothig to implement in the list
     }
 
+    @SuppressLint("SetTextI18n")
     override fun showonepost(post: Post) {
         progressbarid.visibility = View.GONE
 
         materialcardview.visibility = View.VISIBLE
 
         Glide.with(this).load(post.jetpack_featured_media_url).into(iv_book)
-       // tv_titel.text= post.title
+        tv_titel.text= Html.fromHtml(post.title.rendered)
         tv_author_value.text="Hasan Abdullah"
         tv_publishdate_value.text= post.date
-        //tv_description.text = post.description
+        tv_description.text = Html.fromHtml(post.content.rendered)
     }
 
     override fun showerror(msg: String) {
