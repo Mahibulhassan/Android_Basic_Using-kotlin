@@ -1,7 +1,9 @@
 package com.mahibul.hasaner_rafkhata.home.view
 
+
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +15,7 @@ import com.mahibul.hasaner_rafkhata.home.presenter.PostPresenter
 import com.mahibul.hasaner_rafkhata.home.presenter.PostPresenterImp
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
+
 
 class MainActivity : BaseActivity(),PostView{
     override fun setLayoutId(): Int {
@@ -31,7 +34,6 @@ class MainActivity : BaseActivity(),PostView{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         val presenter : PostPresenter = PostPresenterImp(this)
 
         progressbarid.visibility= View.VISIBLE
@@ -53,20 +55,27 @@ class MainActivity : BaseActivity(),PostView{
         showToast(msg)
     }
 
-    private fun setadapter(postlist : MutableList<Post>) {
-        val adapter = PostAdapter(this,postlist,object : ClickListner{
-            override fun onitemcleack(position : Int) {
-                val intent = Intent(this@MainActivity,PostDetailsActivity::class.java)
+    private fun setadapter(postlist: MutableList<Post>) {
+        val adapter = PostAdapter(this, postlist, object : ClickListner {
+            override fun onitemcleack(position: Int) {
+                val intent = Intent(this@MainActivity, PostDetailsActivity::class.java)
                 val id = postlist[position].id
-                intent.putExtra("postid",id)
+                intent.putExtra("postid", id)
                 startActivity(intent)
             }
 
         })
 
 
-        recyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = adapter
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.menu,menu)
+        return true
 
     }
 
