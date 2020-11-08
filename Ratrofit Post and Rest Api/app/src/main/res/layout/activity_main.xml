@@ -9,16 +9,17 @@
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineid"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
         android:layout_height="match_parent"
+        android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.3" />
+
     <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Course Name : "
-        android:textSize="16sp"
-        android:id="@+id/tv_cousename"
-
+        android:text="Couse Name : "
+        app:layout_constraintTop_toBottomOf="@+id/guidelineid"
+        tools:ignore="MissingConstraints" />
 
 
 
