@@ -6,13 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".home.view.MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineid"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent="0.3" />
+    <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Course Name : "
+        android:textSize="16sp"
+        android:id="@+id/tv_cousename"
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
