@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.view.MainActivity">
+    android:padding="10dp"
+    tools:context=".home.view.MainActivity"
+    tools:ignore="ExtraText">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineid"
@@ -13,15 +15,118 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.3" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_imageid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/couse_photo"
+        app:layout_constraintBottom_toTopOf="@id/guidelineid"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp" />
+
     <androidx.appcompat.widget.AppCompatTextView
-        android:layout_marginTop="10dp"
+        android:id="@+id/tv_couse_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Couse Name : "
+        android:layout_marginTop="10dp"
+        android:text="@string/couse_name"
         app:layout_constraintTop_toBottomOf="@+id/guidelineid"
         tools:ignore="MissingConstraints" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_couse_name_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_couse_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_couse_name"
+        tools:ignore="MissingConstraints"
+        tools:text="Course value" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_couse_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_couse_name"
+        tools:ignore="MissingConstraints"
+        tools:text="Couse Duration : 3 Months.." />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_noofclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_couse_duration"
+        tools:ignore="MissingConstraints"
+        tools:text="24 class .." />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_class_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_noofclass"
+        tools:ignore="MissingConstraints"
+        tools:text="2 Hour...." />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_cousefee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_class_duration"
+        tools:ignore="MissingConstraints"
+        tools:text="5000k" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_weeks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/class_days"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cousefee"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_weeks"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/weekview" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/click_here_for_more_details"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/log_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_website" />
+
+    <ProgressBar
+        android:id="@+id/progressbarid"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClint {
 
-    private val BASE_URL = "https://test.hellohasan.com/android-course-api"
+    private const val BASE_URL = "https://test.hellohasan.com/android-course-api/"
     private  val gson = GsonBuilder().setLenient().create()
 
     private val retrofit = Retrofit.Builder()
