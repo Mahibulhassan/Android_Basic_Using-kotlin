@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/gradient_resourse_file"
+android:padding="10dp"
+tools:context=".feacher.academicQulafication.view.AcademicFragment">
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_ssc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="SSC : "
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_institutionname"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="Institution : "
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_ssc"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_institutionname_value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Brahmondi K.K.M Gove High School"
+    android:textSize="16sp"
+    app:layout_constraintStart_toEndOf="@+id/academic_tv_institutionname"
+    app:layout_constraintTop_toTopOf="@+id/academic_tv_institutionname"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_season"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Season : 2014"
+    android:textSize="16sp"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_institutionname"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_cgpa"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Cgpa : 4.69"
+    android:textSize="16sp"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_season"
+    tools:ignore="MissingConstraints" />
+
+<!--add ing  hsc-->
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_hsc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="HSC : "
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_cgpa"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_institutionname_hsc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="Institution : "
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_hsc"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_institutionname_value_hsc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Narsingdi Model College"
+    android:textSize="16sp"
+    app:layout_constraintStart_toEndOf="@+id/academic_tv_institutionname_hsc"
+    app:layout_constraintTop_toTopOf="@+id/academic_tv_institutionname_hsc"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_season_hsc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Season : 2016"
+    android:textSize="16sp"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_institutionname_hsc"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_cgpa_hsc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Cgpa : 5.00"
+    android:textSize="16sp"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_season_hsc"
+    tools:ignore="MissingConstraints" />
+
+
+<!--Adding BSC-->
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_university"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="BSc : "
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_cgpa_hsc"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_institutionname_uiversity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="University : "
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_university"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_institutionname_value_university"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="National University"
+    android:textSize="16sp"
+    app:layout_constraintStart_toEndOf="@+id/academic_tv_institutionname_uiversity"
+    app:layout_constraintTop_toTopOf="@+id/academic_tv_institutionname_uiversity"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_season_university"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Season : 2018"
+    android:textSize="16sp"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_institutionname_uiversity"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/academic_tv_cgpa_university"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Running "
+    android:textSize="16sp"
+    app:layout_constraintTop_toBottomOf="@+id/academic_tv_season_university"
+    tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

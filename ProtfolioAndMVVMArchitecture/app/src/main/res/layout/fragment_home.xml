@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="10dp"
+android:background="@drawable/gradient_resourse_file"
+tools:context=".feacher.home.view.HomeFragment">
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/home_guideline_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent=".3" />
+
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/home_iv_img"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@+id/home_guideline_id"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/home_tv_name"
+    style="@style/TextAppearance.AppCompat.Body1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="@string/name"
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/home_guideline_id"
+    tools:ignore="MissingConstraints" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/home_tv_name_value"
+    style="@style/TextAppearance.AppCompat.Body1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:textSize="16sp"
+    tools:ignore="MissingConstraints"
+    tools:text="Mahibul Hassan Emon"
+    app:layout_constraintStart_toEndOf="@+id/home_tv_name"
+    app:layout_constraintTop_toTopOf="@+id/home_tv_name"
+    />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/home_tv_description"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    tools:text="Give description here..."
+    android:textSize="16sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/home_tv_name"
+    tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/progressbarid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

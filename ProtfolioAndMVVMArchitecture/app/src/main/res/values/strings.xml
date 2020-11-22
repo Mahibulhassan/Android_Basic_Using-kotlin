@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Protfolio</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Mahibul Hassan</string>
+    <string name="nav_header_subtitle">mahibulhassan842@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="skill">Skill</string>
+    <string name="academic_qualification">Academic Qualification</string>
+    <string name="contuct_with_developer">Contuct With Developer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name :</string>
+    <string name="call_me">Call Me</string>
+    <string name="email_me">Email Me</string>
+
+
+</resources>
