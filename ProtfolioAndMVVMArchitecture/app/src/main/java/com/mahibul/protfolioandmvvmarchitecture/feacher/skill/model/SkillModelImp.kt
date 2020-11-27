@@ -13,7 +13,7 @@ class SkillModelImp : SkillModel {
     private val call = apiInterface?.getSkillDetails()
 
     override fun getSkillDetails(callback: NetworkCallBack<SkillData>) {
-        call?.enqueue(object : Callback<SkillData> {
+        call?.clone()?.enqueue(object : Callback<SkillData> {
             override fun onResponse(call: Call<SkillData>, response: Response<SkillData>) {
                 response.body().let {
                     if (it != null) {

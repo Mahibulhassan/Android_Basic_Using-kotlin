@@ -13,7 +13,7 @@ class HomeModelImp : HomeModel{
 
 
     override fun getUserDetails(callBack: NetworkCallBack<UserDetails>) {
-        call?.enqueue(object : Callback<UserDetails> {
+        call?.clone()?.enqueue(object : Callback<UserDetails> {
             override fun onResponse(call: Call<UserDetails>, response: Response<UserDetails>) {
                 response.body().let {
                     if (it != null) {

@@ -12,7 +12,7 @@ class SkilldataImp : SkillDataModel {
     private val apiInterface = RetrofitClint.clint?.create(RetrofitApi::class.java)
     private val call = apiInterface?.getListDetais()
     override fun getSkillDetails(callback: NetworkCallBack<ListSkillData>) {
-        call?.enqueue(object : Callback<ListSkillData>{
+        call?.clone()?.enqueue(object : Callback<ListSkillData>{
             override fun onResponse(call: Call<ListSkillData>, response: Response<ListSkillData>) {
                 response.body().let{
                     if (it != null) {
