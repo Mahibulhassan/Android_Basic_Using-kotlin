@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_skill"
+            android:icon="@drawable/skill_icom"
+            android:title="@string/skill" />
+        <item
+            android:id="@+id/nav_academic"
+            android:icon="@drawable/acdemic_icom"
+            android:title="@string/academic_qualification" />
+        <item
+            android:id="@+id/nav_contruct"
+            android:icon="@drawable/contuct_icom"
+            android:title="@string/contuct_with_developer" />
+    </group>
+</menu>
