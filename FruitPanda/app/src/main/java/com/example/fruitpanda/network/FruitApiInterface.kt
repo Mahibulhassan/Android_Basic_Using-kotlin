@@ -7,5 +7,6 @@ import retrofit2.http.GET
 interface FruitApiInterface {
 
     @GET("Mahibulhassan/Project_data-Json-data/main/Data_Fruit.json")
+  //  fun getFruitdetails() : Call<MutableList<Fruit_model>>
     fun getFruitdetails() : Call<MutableList<Fruit_model>>
 }

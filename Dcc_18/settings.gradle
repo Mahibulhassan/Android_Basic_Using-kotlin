@@ -1,0 +1,2 @@
+rootProject.name = "Dcc_18"
+include ':app'
