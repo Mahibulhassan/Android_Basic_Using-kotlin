@@ -16,10 +16,10 @@ class GalleryFragment : Fragment() {
     private var _binding: FragmentGalleryBinding? = null
 
     private var images = arrayOf<Int>(R.drawable.pic,R.drawable.picall,R.drawable.pic1,R.drawable.pic2
-    ,R.drawable.pic2_2,R.drawable.pic3,R.drawable.pic3_1,R.drawable.pic3_2,R.drawable.pic4,R.drawable.pic5
+    ,R.drawable.pic2_2,R.drawable.pic3_1,R.drawable.pic4,R.drawable.pic5,R.drawable.pic3_2
     ,R.drawable.pic5_2,R.drawable.pic6,R.drawable.pic6_2,R.drawable.pic7,R.drawable.pic7_1,R.drawable.pic8,
-    R.drawable.pic9,R.drawable.pic10,R.drawable.pic11,R.drawable.pic11_2,R.drawable.pic11_3,R.drawable.pic12,
-    R.drawable.pic12_2,R.drawable.pic13,R.drawable.pic14,R.drawable.pic15,R.drawable.pic16,R.drawable.pic18)
+    R.drawable.pic9,R.drawable.pic11,R.drawable.pic11_2,R.drawable.pic11_3,
+    R.drawable.pic12_2,R.drawable.pic13,R.drawable.pic18)
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -35,7 +35,6 @@ class GalleryFragment : Fragment() {
 
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
         val adapter = SliderAdapter(images)
         _binding!!.imageSlider.setSliderAdapter(adapter)
         _binding!!.imageSlider.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION)
