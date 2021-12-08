@@ -31,10 +31,6 @@ class SchduleFragment : Fragment() {
         _binding = FragmentSchduleBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 

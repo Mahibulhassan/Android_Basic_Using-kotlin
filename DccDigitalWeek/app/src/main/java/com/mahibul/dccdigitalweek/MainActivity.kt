@@ -1,5 +1,6 @@
 package com.mahibul.dccdigitalweek
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMain.toolbar)
+        binding.appBarMain.toolbar.setBackgroundColor(resources.getColor(R.color.purple_500))
 
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
