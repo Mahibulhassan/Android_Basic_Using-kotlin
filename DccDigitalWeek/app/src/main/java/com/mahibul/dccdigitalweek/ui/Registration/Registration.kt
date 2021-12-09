@@ -1,10 +1,12 @@
 package com.mahibul.dccdigitalweek.ui.Registration
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
 import com.mahibul.dccdigitalweek.Data.Reposotory.Registration.RegisterData
+import com.mahibul.dccdigitalweek.MainActivity
 import com.mahibul.dccdigitalweek.R
 import com.mahibul.dccdigitalweek.core.ActivityMoVe
 import com.mahibul.dccdigitalweek.databinding.ActivityRegistrationBinding
@@ -25,7 +27,7 @@ class Registration : AppCompatActivity(),ActivityMoVe{
         binding.btnRegister.setOnClickListener {
             val name = binding.edtUsername.text.toString()
             val batch = binding.edtBatch.text.toString()
-            val sec = binding.edtSection.text.toString()
+            val sec = binding.edtSection.text.toString().uppercase()
             val phone = binding.edtPhone.text.toString()
             val email = binding.edtEmail.text.toString()
             val pass = binding.edtPassword.text.toString()
@@ -38,11 +40,13 @@ class Registration : AppCompatActivity(),ActivityMoVe{
                 viewModel.registerUser(RegisterData(name,batch,sec,phone,email,pass))
             }
         }
-
     }
 
     override fun moveActivity(success: Int) {
-       Toast.makeText(this,"Resutl Pritn $success",Toast.LENGTH_LONG).show()
+      if(success==5){
+          startActivity(Intent(this, MainActivity::class.java))
+          finish()
+      }
     }
 
     override fun errSms(errMsg: String) {
