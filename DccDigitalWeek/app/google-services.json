@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "910261133141",
+    "project_id": "dcc-digital-week",
+    "storage_bucket": "dcc-digital-week.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:910261133141:android:14567bc5d2b8e8ccfe99dc",
+        "android_client_info": {
+          "package_name": "com.mahibul.dccdigitalweek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "910261133141-q44th8rnk6aq0l58nglhd756s39c4jd7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj0hvGiH3t4f4pi1WND-WvQ-CxWbKHsO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "910261133141-q44th8rnk6aq0l58nglhd756s39c4jd7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
