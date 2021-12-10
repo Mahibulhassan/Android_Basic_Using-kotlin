@@ -11,9 +11,10 @@ class RegistrModelImp : RegisterModel {
     override fun registrationUser(registerData: RegisterData, callback: DataFatchCallback<Int>) {
         auth.createUserWithEmailAndPassword(registerData.email,registerData.password).addOnCompleteListener {
             if (it.isSuccessful){
-
                 val user = auth.currentUser
                 val user_id = user?.uid
+                val db1 =FirebaseDatabase.getInstance().getReference("User").child(user_id!!).child("events")
+                db1.setValue(EventData("Null","Null","Null","Null","Null","Null"))
                 val db = FirebaseDatabase.getInstance().getReference("User").child(user_id!!).child("Profile")
                     db.setValue(registerData).addOnCompleteListener {
                         if (it.isSuccessful){
@@ -22,7 +23,6 @@ class RegistrModelImp : RegisterModel {
                             callback.onError("Authinacation Error")
                         }
                     }
-
                 } else{
                 callback.onError("Registration Unsuccessful")
             }

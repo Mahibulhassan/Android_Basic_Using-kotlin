@@ -27,6 +27,7 @@ class HomeFragment : Fragment(){
         //Finding User data
 
         viewModel.getUserData()
+        viewModel.getEventData()
 
         viewModel.dataUs.observe(viewLifecycleOwner,{
             binding.tvName.text = it.user_name
@@ -38,8 +39,14 @@ class HomeFragment : Fragment(){
         viewModel.error.observe(viewLifecycleOwner,{
             Toast.makeText(requireContext(),"Data Feach Failed",Toast.LENGTH_LONG).show()
         })
-
-
+        viewModel.events.observe(viewLifecycleOwner,{
+            binding.tvEvent1.text= it.event1
+            binding.tvEvent1rank.text=it.event1position
+            binding.tvEvent2.text=it.event2
+            binding.tvEvent2rank.text=it.event2position
+            binding.tvEvent3.text=it.event3
+            binding.tvEvent3rank.text=it.event3position
+        })
         return root
     }
 
