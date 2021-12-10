@@ -1,8 +1,6 @@
 package com.mahibul.dccdigitalweek.Data.Reposotory.login
 
 import com.google.firebase.auth.FirebaseAuth
-import com.mahibul.dccdigitalweek.Data.Reposotory.login.LoginData
-import com.mahibul.dccdigitalweek.Data.Reposotory.login.LoginModel
 import com.mahibul.dccdigitalweek.core.DataFatchCallback
 
 class LoginModelImp : LoginModel {

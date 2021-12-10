@@ -3,6 +3,7 @@ package com.mahibul.dccdigitalweek.ui.Registration
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Toast
 import com.mahibul.dccdigitalweek.Data.Reposotory.login.LoginData
 import com.mahibul.dccdigitalweek.MainActivity
@@ -27,6 +28,9 @@ class Login : AppCompatActivity(),ActivityMoVe{
           //  startActivity(Intent(this,MainActivity::class.java))
             val email = binding.emailId.text.toString()
             val pass = binding.passwordId.text.toString()
+            if(TextUtils.isEmpty(email)|| TextUtils.isEmpty(pass)){
+                Toast.makeText(this,"Login Faliled",Toast.LENGTH_LONG).show()
+            }else
             viewModel.userLogin(LoginData(email,pass))
         }
         binding.btnRegistration.setOnClickListener {
