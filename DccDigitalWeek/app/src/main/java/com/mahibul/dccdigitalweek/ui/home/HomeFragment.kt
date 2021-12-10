@@ -9,12 +9,12 @@ import androidx.fragment.app.Fragment
 import com.mahibul.dccdigitalweek.Data.Reposotory.HomePage.User
 import com.mahibul.dccdigitalweek.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment(),FindData{
+class HomeFragment : Fragment(){
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel = HomeViewModel(this)
+    private val viewModel = HomeViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,23 +27,25 @@ class HomeFragment : Fragment(),FindData{
         //Finding User data
 
         viewModel.getUserData()
+
+        viewModel.dataUs.observe(viewLifecycleOwner,{
+            binding.tvName.text = it.user_name
+            binding.tvEmail.text = it.email
+            binding.tvBatch.text = "Batch : "+ it.batch
+            binding.tvSection.text = "Section : "+it.section
+        })
+
+        viewModel.error.observe(viewLifecycleOwner,{
+            Toast.makeText(requireContext(),"Data Feach Failed",Toast.LENGTH_LONG).show()
+        })
+
+
         return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    override fun findData(data: User) {
-        binding.tvName.text = data.user_name
-        binding.tvEmail.text = data.email
-        binding.tvBatch.text = "Batch : "+ data.batch
-        binding.tvSection.text = "Section : "+data.section
-    }
-
-    override fun error(error: String) {
-        Toast.makeText(requireContext(),"Data Featch Failed",Toast.LENGTH_LONG).show()
     }
 
 
