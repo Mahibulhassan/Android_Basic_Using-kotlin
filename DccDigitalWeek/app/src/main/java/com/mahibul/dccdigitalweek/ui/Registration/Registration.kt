@@ -36,7 +36,11 @@ class Registration : AppCompatActivity(),ActivityMoVe{
                 Toast.makeText(this,"Requre All Field",Toast.LENGTH_LONG).show()
             }else if (pass.length < 6){
                 Toast.makeText(this,"Password Must be 6 or upper",Toast.LENGTH_LONG).show()
-            }else{
+            }else if(batch.length > 2){
+                Toast.makeText(this,"2 charater like 20",Toast.LENGTH_LONG).show()
+            }else if(sec.length > 1){
+                Toast.makeText(this,"one word like B",Toast.LENGTH_LONG).show()
+            } else{
                 viewModel.registerUser(RegisterData(name,batch,sec,phone,email,pass))
             }
         }
