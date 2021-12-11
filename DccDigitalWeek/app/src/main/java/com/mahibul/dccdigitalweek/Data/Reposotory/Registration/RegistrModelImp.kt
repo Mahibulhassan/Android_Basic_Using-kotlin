@@ -14,7 +14,7 @@ class RegistrModelImp : RegisterModel {
                 val user = auth.currentUser
                 val user_id = user?.uid
                 val db1 =FirebaseDatabase.getInstance().getReference("User").child(user_id!!).child("events")
-                db1.setValue(EventData("Null","Null","Null","Null","Null","Null"))
+                db1.setValue(EventData("Event : Null","Event : Null","Event : Null","Position : Null","Position : Null","Position : Null"))
                 val db = FirebaseDatabase.getInstance().getReference("User").child(user_id!!).child("Profile")
                     db.setValue(registerData).addOnCompleteListener {
                         if (it.isSuccessful){

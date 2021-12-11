@@ -7,11 +7,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.mahibul.dccdigitalweek.Data.Reposotory.Registration.EventData
 import com.mahibul.dccdigitalweek.databinding.FragmentRegistrationBinding
+import com.mahibul.dccdigitalweek.ui.Registration.ViewModel.EventsViewMOdel
 
 class RegistrationFragment : Fragment() {
     private var _binding: FragmentRegistrationBinding? = null
     private val binding get() = _binding!!
+
+    private val viewModel = EventsViewMOdel()
 
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
@@ -51,11 +55,16 @@ class RegistrationFragment : Fragment() {
                 if (events.size > 3){
                     Toast.makeText(requireContext(),"You can Participate Maximum 3",Toast.LENGTH_LONG).show()
                 }else if(events.size == 1){
-                    Toast.makeText(requireContext(),"$events[0]",Toast.LENGTH_LONG).show()
+                    val data = EventData(events[0],"Event : Null","Event : Null","Position : Null","Position : Null","Position : Null")
+                    viewModel.updateEvents(data)
+
                 }else if(events.size == 2){
-                    Toast.makeText(requireContext(),"$events[0] ",Toast.LENGTH_LONG).show()
+
+                    val data = EventData(events[0],events[1],"Event : Null","Position : Null","Position : Null","Position : Null")
+                    viewModel.updateEvents(data)
                 }else{
-                    Toast.makeText(requireContext(),"$events[0]",Toast.LENGTH_LONG).show()
+                    val data = EventData(events[0],events[1],events[2],"Position : Null","Position : Null","Position : Null")
+                    viewModel.updateEvents(data)
                 }
             }
         }
