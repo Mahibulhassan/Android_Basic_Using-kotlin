@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.findNavController
 import com.mahibul.dccdigitalweek.Data.Reposotory.Registration.EventData
 import com.mahibul.dccdigitalweek.databinding.FragmentRegistrationBinding
 import com.mahibul.dccdigitalweek.ui.Registration.ViewModel.EventsViewMOdel
@@ -71,7 +72,8 @@ class RegistrationFragment : Fragment() {
 
         viewModel.success.observe(viewLifecycleOwner,{
             if (it == 5){
-
+                val action = RegistrationFragmentDirections.actionNavRegistrationToNavHome()
+                view?.findNavController()?.navigate(action)
             }
         })
         viewModel.error.observe(viewLifecycleOwner,{

@@ -24,6 +24,7 @@ class Login : AppCompatActivity(),ActivityMoVe{
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.btnLogin.setOnClickListener {
           //  startActivity(Intent(this,MainActivity::class.java))
             val email = binding.emailId.text.toString()
