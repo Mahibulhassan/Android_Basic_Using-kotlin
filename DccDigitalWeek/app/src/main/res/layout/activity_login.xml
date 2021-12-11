@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundpic"
+    android:background="@drawable/hack"
     android:padding="5dp"
     tools:context=".ui.Registration.Login">
 
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".7" />
+        app:layout_constraintGuide_percent=".5" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/email_id"

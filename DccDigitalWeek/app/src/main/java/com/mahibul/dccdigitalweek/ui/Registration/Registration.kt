@@ -31,8 +31,9 @@ class Registration : AppCompatActivity(),ActivityMoVe{
             val phone = binding.edtPhone.text.toString()
             val email = binding.edtEmail.text.toString()
             val pass = binding.edtPassword.text.toString()
+            val roll = binding.edtRoll.text.toString()
 
-            if (TextUtils.isEmpty(name)|| TextUtils.isEmpty(batch)|| TextUtils.isEmpty(sec)|| TextUtils.isEmpty(phone)|| TextUtils.isEmpty(email)|| TextUtils.isEmpty(pass)){
+            if (TextUtils.isEmpty(name)|| TextUtils.isEmpty(batch)|| TextUtils.isEmpty(sec)|| TextUtils.isEmpty(phone)|| TextUtils.isEmpty(email)|| TextUtils.isEmpty(pass)|| TextUtils.isEmpty(roll)){
                 Toast.makeText(this,"Requre All Field",Toast.LENGTH_LONG).show()
             }else if (pass.length < 6){
                 Toast.makeText(this,"Password Must be 6 or upper",Toast.LENGTH_LONG).show()
@@ -40,8 +41,10 @@ class Registration : AppCompatActivity(),ActivityMoVe{
                 Toast.makeText(this,"2 charater like 20",Toast.LENGTH_LONG).show()
             }else if(sec.length > 1){
                 Toast.makeText(this,"one word like B",Toast.LENGTH_LONG).show()
-            } else{
-                viewModel.registerUser(RegisterData(name,batch,sec,phone,email,pass))
+            }else if(roll.length > 3){
+                Toast.makeText(this,"Maximum 3 char",Toast.LENGTH_LONG).show()
+            }  else{
+                viewModel.registerUser(RegisterData(name,batch,sec,phone,email,pass,roll))
             }
         }
     }

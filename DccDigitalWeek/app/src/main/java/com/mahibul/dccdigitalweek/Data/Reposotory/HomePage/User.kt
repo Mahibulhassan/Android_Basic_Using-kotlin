@@ -6,7 +6,8 @@ data class User(
     val section : String,
     val phone : String,
     val email : String,
-    val password : String
+    val password : String,
+    val roll : String
 ){
-    constructor() : this("","","","","","")
+    constructor() : this("","","","","","","")
 }

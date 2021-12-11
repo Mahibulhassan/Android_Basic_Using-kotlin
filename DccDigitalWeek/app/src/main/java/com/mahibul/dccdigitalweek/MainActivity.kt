@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMain.toolbar)
-        binding.appBarMain.toolbar.setBackgroundColor(resources.getColor(R.color.purple_500))
+        binding.appBarMain.toolbar.setBackgroundColor(resources.getColor(R.color.purple_700))
 
 
         val drawerLayout: DrawerLayout = binding.drawerLayout

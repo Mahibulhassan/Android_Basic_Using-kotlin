@@ -6,5 +6,6 @@ data class RegisterData(
     val section : String,
     val phone : String,
     val email : String,
-    val password : String
+    val password : String,
+    val roll : String
 )

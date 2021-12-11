@@ -68,6 +68,15 @@ class RegistrationFragment : Fragment() {
                 }
             }
         }
+
+        viewModel.success.observe(viewLifecycleOwner,{
+            if (it == 5){
+
+            }
+        })
+        viewModel.error.observe(viewLifecycleOwner,{
+            Toast.makeText(requireContext(),"Submit Failed",Toast.LENGTH_LONG).show()
+        })
         return root
     }
 
