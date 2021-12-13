@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-android:background="@drawable/gradient_color"
+    android:background="#F3EEEE"
     tools:context=".ui.About.AboutFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,7 +16,6 @@ android:background="@drawable/gradient_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:text="@string/About_data"
-        android:gravity="center"
         android:textColor="@color/black"
         android:textSize="25dp"
 

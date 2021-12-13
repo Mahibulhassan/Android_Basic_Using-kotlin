@@ -22,7 +22,7 @@ class OrganizersFragment : Fragment() {
         val root: View = binding.root
 
 
-        _binding!!.textId.text= "Organizers Fragment"
+
 
 
         return root
