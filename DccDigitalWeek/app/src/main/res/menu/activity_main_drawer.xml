@@ -35,5 +35,10 @@
             android:icon="@drawable/about"
             android:title="About" />
 
+        <item
+            android:id="@+id/nav_developer"
+            android:icon="@drawable/developers"
+            android:title="Developer Info" />
+
     </group>
 </menu>

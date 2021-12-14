@@ -50,5 +50,12 @@
         android:name="com.mahibul.dccdigitalweek.ui.About.AboutFragment"
         android:label="About"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/nav_developer"
+        android:label="Developer Information"
+        android:name="com.mahibul.dccdigitalweek.ui.About.Developer"
+        tools:layout="@layout/fragment_developer"
+
+        />
 
 </navigation>

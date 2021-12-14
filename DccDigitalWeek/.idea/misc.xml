@@ -17,6 +17,7 @@
         <entry key="app/src/main/res/layout/content_main.xml" value="0.1648148148148148" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/layout/fragment_contacts.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/fragment_developer.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/layout/fragment_organizers.xml" value="0.19635416666666666" />
