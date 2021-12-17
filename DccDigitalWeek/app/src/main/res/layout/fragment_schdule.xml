@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="WEBSITE DESIGN"
+                android:text="Poster Presentation"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
